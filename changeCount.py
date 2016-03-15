@@ -1,4 +1,4 @@
-from __future__ import division
+from __future__ import division, print_function
 from sklearn.neural_network import MLPClassifier
 from sklearn import datasets
 
@@ -18,6 +18,6 @@ clf.fit(X, y)
 
 predictions = clf.predict(inp_data[test_set])
 
-print predictions
-print clf.coefs_
-print sum(predictions == targets[test_set]) / len(predictions)
+print(predictions)
+print(clf.coefs_)
+print("APPROX ACCURACY: ", sum(predictions == targets[test_set]) / len(predictions))
